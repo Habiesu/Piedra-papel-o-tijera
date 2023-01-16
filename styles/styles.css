@@ -2,17 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #000000;
 }
 
 body{
-    animation: gradiant 10s ease infinite;
-    background: linear-gradient(75deg, rgb(158, 158, 61), rgb(50, 170, 50), rgb(72, 72, 240));
-    background-size: 400% 400%;
+    background: linear-gradient(75deg, rgb(50, 170, 50), rgb(72, 72, 240));
     height: 100vh;
 }
 
-@keyframes gradiant {
+@keyframes crecer{
+    100%{width: 3rem;}
+}
+
+#botton:hover{
+    animation: crecer 1s ease ;
+}
+
+
+/* @keyframes gradiant {
     0% {
         background-position: 0% 50%;
     }
@@ -22,5 +29,11 @@ body{
     100% {
         background-position: 0% 50%;
     }
-}
+} */
+/*  linear-gradient(75deg, rgb(50, 170, 50), rgb(72, 72, 240)); 
+    animation: gradiant 10s ease infinite;
+    background-size: 400% 400%;
+    height: 100vh;
+*/
+
 

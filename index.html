@@ -10,78 +10,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="">
-
     <!-- Title -->
-
     <div class="flex justify-center pt-5">
         <h1 class="font-bold text-[2.4rem]">Piedra, papel o tijera</h1>
     </div>
     
     <!-- Acá están los datos del usuario y de la maquina -->
 
-    <div class="h-full mx-40">
-        <div class="flex justify-between mt-12">
+    <div class="mx-[128px] ">
+        <div class="flex justify-between mt-10">
+            <!-- Player Scoreboard -->
             <div id="player-info-container">
-                <p class="font-bold text-[1.4rem]">Jugador: <span class="text-[#000000]" id="player"></span></p>
-                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="player-victories">0</span></p>
-                <p class="font-bold text-[1.4rem]">Empates: <span class="text-[#000000]" id="draw">0</span></p>
+                <p class="font-bold text-[1.4rem]">Jugador<span class="text-[#000000]" id="player"></span></p>
+                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="player-victories"></span></p>
             </div>
-
+            <!-- Match history -->
             <div class="flex flex-col items-center">
                 <p class="text-[1.5rem] font-bold">Historial de partidas</p>
-                <div id="history" class="color-[#fff] border-[4px] border-[#000000] bg-[#202020] min-h-[40px] max-h-[300px] w-[200px] rounded-[10px] mt-4">
-                </div>    
+                <div id="history" class="color-[#fff] border-[4px] border-[#000000] bg-green-500 min-h-[40px] max-h-[300px] w-[200px] rounded-[10px] mt-4"></div>    
             </div>
-
+            <!-- Machine Scoreboard -->
             <div id="machine-info-container">
                 <p class="font-bold text-[1.4rem]">Maquina</p>
-                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="machine-victories">0</span></p>
+                <p class="font-bold text-[1.4rem]">Victorias: <span class="text-[#000000]" id="machine-victories"></span></p>
             </div>        
         </div>
 
         <!-- Botones -->
 
-        <div class=" flex justify-between ">
-
+        
             <!-- Botones del jugador -->
-
-            <div class="flex items-end" id="player-buttons">
-                <button onclick="opciones('piedra');" class="px-2 py-1 ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./rock.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Piedra</span>
-                </button>
-                <button onclick="opciones('papel');" class=" px-2 py-1  ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./paper.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Papel</span>
-                </button>
-                <button onclick="opciones('tijera');" class=" px-2 py-1  ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./scissors.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Tijera</span>
-                </button>
-            </div>
-
-            <!-- Botones de la maquina -->
-
-            <div class="flex items-end" id="machine-buttons">
-                <button class="px-2 py-1 ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./rock.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Piedra</span>
-                </button>
-                <button class=" px-2 py-1  ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./paper.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Papel</span>
-                </button>
-                <button class=" px-2 py-1  ">
-                    <img class="w-[30px] m-auto md:w-[60px]" src="./scissors.png" alt="">
-                    <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Tijera</span>
-                </button>
-            </div>
-
+        <div class="flex items-end justify-center relative gap-10 bottom-[-7rem]" id="player-buttons">
+            <button onclick="opciones('piedra');" class="px-2 py-1 ">
+                <img id="botton" class="w-[30px] m-auto md:w-[60px]" src="./rock.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Piedra</span>
+            </button>
+            <button onclick="opciones('papel');" class=" px-2 py-1  ">
+                <img id="botton" class="w-[30px] m-auto md:w-[60px]" src="./paper.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Papel</span>
+            </button>
+            <button onclick="opciones('tijera');" class=" px-2 py-1  ">
+                <img id="botton" class="w-[30px] m-auto md:w-[60px]" src="./scissors.png" alt="">
+                <span class="text-[0.8rem] md:text-[1.4rem] font-bold">Tijera</span>
+            </button>
         </div>
+            <!-- Botones de la maquina -->
+            
+
     </div>
-    <!-- Historial de partidas -->
-
-
 </body>
 <script src="./index.js"></script>
 </html>

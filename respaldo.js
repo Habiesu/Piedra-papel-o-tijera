@@ -35,3 +35,17 @@ function juego(caracter){
         document.getElementById('machine-victories').innerHTML = defeats;
     }
 }
+
+function resultado(resultado,string,contador,id1,id2){
+    resultado.innerHTML = string;
+    resultado.style = "color:black;font-size:1.2rem;display:flex;justify-content:center;color:black;font-weight:bold";
+    document.getElementById(id1).appendChild(resultado);
+    document.getElementById(id2).innerHTML = contador +=1;
+}
+
+let resultado = document.createElement('p');
+resultado.innerHTML = string;
+resultado.style = "color:black;font-size:1.2rem;display:flex;justify-content:center;color:black;font-weight:bold";
+document.getElementById(id1).appendChild(resultado);
+contador++;
+document.getElementById(id2).innerHTML = contador;
