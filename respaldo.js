@@ -1,3 +1,23 @@
+var operacion = "";
+
+function botones(caracter){
+    operacion += caracter;
+    document.getElementById("resultado").innerHTML = caracter;
+}
+
+function resultados(){
+    document.getElementById("resultado").innerHTML = eval(operacion);
+    operacion = eval(operacion);
+}
+
+function borrar(){
+    operacion = "";
+    document.getElementById("resultado").innerHTML = "Resultado";
+}
+
+
+
+
 function juego(caracter){
     let won = document.createElement('p');
     let defeat = document.createElement('p');

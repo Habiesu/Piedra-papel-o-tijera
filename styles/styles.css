@@ -6,17 +6,10 @@
 }
 
 body{
-    background: linear-gradient(75deg, rgb(50, 170, 50), rgb(72, 72, 240));
+    background: linear-gradient(0deg, rgb(50, 170, 50), rgb(72, 72, 240));
     height: 100vh;
 }
 
-@keyframes crecer{
-    100%{width: 3rem;}
-}
-
-#botton:hover{
-    animation: crecer 1s ease ;
-}
 
 
 /* @keyframes gradiant {
