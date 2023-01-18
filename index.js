@@ -7,7 +7,7 @@ var victories = 0;
 document.getElementById('player-victories').innerHTML=0;
 var defeats = 0;
 document.getElementById('machine-victories').innerHTML=0;
-// 
+// Botones 
 function opciones(caracter){
     machine = Math.floor(Math.random()*3);
     if (caracter === 'piedra'){
@@ -23,7 +23,7 @@ function opciones(caracter){
         juego(usuario);
     }
 }
-
+// Lógica del juego
 function juego(caracter){
     if ((usuario === 0 && machine === 2) || (usuario === 1 && machine === 0) || (usuario === 2 && machine === 1)){ // Primer caso
         victories += 1;
@@ -57,6 +57,3 @@ function juego(caracter){
         }
     }   
 }
-
-
-//historial.shift() 
